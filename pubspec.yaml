@@ -1,0 +1,28 @@
+name: flutter_gen_package
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  build_runner:
+  flutter_gen_runner:
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+  fonts:
+    - family: TheNautigal
+      fonts:
+        - asset: assets/fonts/TheNautigal-Bold.ttf
+        - asset: assets/fonts/TheNautigal-Regular.ttf
