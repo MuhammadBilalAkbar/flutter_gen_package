@@ -85,10 +85,58 @@ Problems from Videos
 
 Main Points / Purpose Of Lesson
 
-1. Manage Assets
+1. You will learn how to manage the paths to our Assets, Fonts, and Colors using flutter gen package
+   based on our pubspec yaml file.
+2. Manage Images
+3. Manage Fonts
 
 The Structured Main Content
 
 1. Managing the paths to our Assets, Fonts, and Colors is error prone, therefore we want to use a
    code generator that automatically creates a path to our assets, fonts, and colors based on our
    pubspec yaml file.
+2. First of all, add some images and fonts in the pubspec yaml file:
+    ```dart 
+    flutter:
+    uses-material-design: true
+    assets:
+    - assets/images/
+    fonts:
+      - family: TheNautigal
+      fonts:
+      - asset: assets/fonts/TheNautigal-Bold.ttf
+      - asset: assets/fonts/TheNautigal-Regular.ttf
+      ```
+3. Then run this command for mac, Linux, and windows:
+
+    ```dart 
+    dart pub
+    
+    global activate
+    flutter_gen
+    ```
+
+4. Then add following dependencies in the dev_dependencies section:
+    ```dart
+    dev_dependencies:
+      build_runner:
+      flutter_gen_runner:
+    ```
+5. Then run `flutter pub get`.
+6. In the end run `dart run build_runner build`, and now the files asset.gen.dart and font.gen.dart
+   have been generated in gen folder inside lib.
+7. Let's use them like this in our main.dart file:
+    ```dart
+          const Text(
+                    'Welcome Developers',
+                    style: TextStyle(
+                      fontFamily: FontFamily.theNautigal,
+                      fontSize: 100,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Image.asset(Assets.images.nature1.keyName, scale: 10),
+                  Assets.images.nature1.image(scale: 500),
+    ```
+8. We can also customize more things by using this package.
+9. Here is the detailed documentation of this package: https://pub.dev/packages/flutter_gen
