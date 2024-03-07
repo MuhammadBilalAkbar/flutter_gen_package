@@ -57,7 +57,7 @@
 - Multiple Asset Providers: flutter_gen supports generating code for various asset providers, such
   as AssetBundle, NetworkImage, and FileImage, providing flexibility in how you handle your assets.
 
-Problems from Videos
+**Problems from Videos**
 
 - Question:
   I need to generate a single file in the lib folder based on all classes of the application with a
@@ -83,14 +83,14 @@ Problems from Videos
 
 ## 3. Video Structure
 
-Main Points / Purpose Of Lesson
+**Main Points / Purpose Of Lesson**
 
 1. You will learn how to manage the paths to our Assets, Fonts, and Colors using flutter gen package
    based on our pubspec yaml file.
 2. Manage Images
 3. Manage Fonts
 
-The Structured Main Content
+**The Structured Main Content**
 
 1. Managing the paths to our Assets, Fonts, and Colors is error prone, therefore we want to use a
    code generator that automatically creates a path to our assets, fonts, and colors based on our
