@@ -4,17 +4,17 @@
     - gen flutter package code generation
     - flutter gen runner
     - flutter gen
-    - flutter gen_|10n
+    - flutter gen_l10n
     - flutter asset gen
     - gen flutter package free
     - gen flutter package code generation github
-    - flutter gen_|10n command
+    - flutter gen_l10n command
     - flutter gen example
     - flutter gen github
     - flutter gen code generate
-    - flutter gen_|10n example
-    - flutter gen_|10n nok working
-    - flutter gen -|10n github
+    - flutter gen_l10n example
+    - flutter gen_l10n nok working
+    - flutter gen -l10n github
     - gen flutter package free github
     - flutter asset gen example
     - flutter code generate online
@@ -96,7 +96,7 @@
    code generator that automatically creates a path to our assets, fonts, and colors based on our
    pubspec yaml file.
 2. First of all, add some images and fonts in the pubspec yaml file:
-    ```dart 
+    ```dart\
     flutter:
     uses-material-design: true
     assets:
@@ -109,15 +109,12 @@
       ```
 3. Then run this command for mac, Linux, and windows:
 
-    ```dart 
-    dart pub
-    
-    global activate
-    flutter_gen
+    ```dart\
+    dart pub global activate flutter_gen
     ```
 
 4. Then add following dependencies in the dev_dependencies section:
-    ```dart
+    ```dart\
     dev_dependencies:
       build_runner:
       flutter_gen_runner:

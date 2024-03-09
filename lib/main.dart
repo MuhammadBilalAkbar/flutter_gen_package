@@ -39,44 +39,58 @@ class _MyHomePageState extends State<MyHomePage> {
             style: const TextStyle(
               fontSize: 24,
               fontWeight: FontWeight.bold,
+              color: Colors.white,
             ),
           ),
         ),
         body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              //   const Text(
-              //     'Welcome Developers',
-              //     style: TextStyle(
-              //       fontFamily: 'TheNautigal',
-              //       fontSize: 100,
-              //       fontWeight: FontWeight.bold,
-              //     ),
-              //   ),
-              //   Image.asset('assets/images/nature-1.jpg', scale: 10),
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                //   const Text(
+                //     'Welcome Developers',
+                //     style: TextStyle(
+                //       fontFamily: 'TheNautigal',
+                //       fontSize: 100,
+                //       fontWeight: FontWeight.bold,
+                //     ),
+                //   ),
+                //   Image.asset('assets/images/nature-1.jpg', scale: 10),
 
-              // const Text(
-              //   'Welcome Developers',
-              //   style: TextStyle(
-              //     fontFamily: AppConstants.theNautigal,
-              //     fontSize: 100,
-              //     fontWeight: FontWeight.bold,
-              //   ),
-              // ),
-              // Image.asset(AppConstants.nature1, scale: 10),
+                // const Text(
+                //   'Welcome Developers',
+                //   style: TextStyle(
+                //     fontFamily: AppConstants.theNautigal,
+                //     fontSize: 100,
+                //     fontWeight: FontWeight.bold,
+                //   ),
+                // ),
+                // Image.asset(AppConstants.nature1, scale: 10),
 
-              const Text(
-                'Welcome Developers',
-                style: TextStyle(
-                  fontFamily: FontFamily.theNautigal,
-                  fontSize: 100,
-                  fontWeight: FontWeight.bold,
+                const Text(
+                  'Welcome Developers',
+                  style: TextStyle(
+                    fontFamily: FontFamily.theNautigal,
+                    fontSize: 100,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
-              ),
-              Image.asset(Assets.images.nature1.keyName, scale: 10),
-              Assets.images.nature1.image(scale: 500),
-            ],
+                Image.asset(
+                  Assets.images.nature1.keyName,
+                  scale: 10,
+                  fit: BoxFit.cover,
+                ),
+                const SizedBox(height: 20),
+                Image.asset(
+                  Assets.images.nature2.keyName,
+                  scale: 5,
+                  fit: BoxFit.cover,
+                ),
+                const SizedBox(height: 20),
+                Assets.images.nature3.image(scale: 20),
+              ],
+            ),
           ),
         ),
       );
